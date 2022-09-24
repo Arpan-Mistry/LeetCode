@@ -19,8 +19,6 @@ class Solution {
                     s = mid + 1;
                 } else if (target < nums[mid]) {
                     e = mid - 1;
-                } else {
-                    break;
                 }
             }
 
@@ -34,8 +32,6 @@ class Solution {
                     s = mid + 1;
                 } else if (target <= nums[mid]) {
                     e = mid - 1;
-                } else {
-                    break;
                 }
             }
             i = s;
