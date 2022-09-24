@@ -1,11 +1,11 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int s = 0;
-        int e = nums.length - 1;
         int[] arr = { -1, -1 };
-        if (nums.length == 0 || target < nums[s] || target > nums[e]) {
+        if (nums.length == 0) {
             return arr;
         }
+        int s = 0;
+        int e = nums.length - 1;
         int i;
         int j;
         int pos = -1;
