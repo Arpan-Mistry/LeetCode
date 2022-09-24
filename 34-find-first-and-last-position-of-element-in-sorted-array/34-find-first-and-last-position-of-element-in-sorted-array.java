@@ -12,7 +12,7 @@ class Solution {
         while (s <= e) {
             int mid = (s + e) / 2;
             if (target >= nums[mid]) {
-                if (target == nums[mid] && pos == -1) {
+                if (pos == -1 && target == nums[mid]) {
                     pos = mid;
                     System.out.println(pos);
                 }
