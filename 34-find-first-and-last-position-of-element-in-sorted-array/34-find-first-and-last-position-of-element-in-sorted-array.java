@@ -1,18 +1,18 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int[] arr = { -1, -1 };
-        if (nums.length == 0) {
-            return arr;
-        }
         int s = 0;
         int e = nums.length - 1;
+        int[] arr = { -1, -1 };
+        if (nums.length == 0 || target < nums[s] || target > nums[e]) {
+            return arr;
+        }
         int i;
         int j;
         int pos = -1;
         while (s <= e) {
             int mid = (s + e) / 2;
             if (target >= nums[mid]) {
-                if (pos == -1 && target == nums[mid]) {
+                if (target == nums[mid] && pos == -1) {
                     pos = mid;
                     System.out.println(pos);
                 }
