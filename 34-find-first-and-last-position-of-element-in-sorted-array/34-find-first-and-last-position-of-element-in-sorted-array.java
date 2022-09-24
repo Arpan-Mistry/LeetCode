@@ -2,9 +2,8 @@ class Solution {
     public int[] searchRange(int[] nums, int target) {
         int s = 0;
         int e = nums.length - 1;
-        int[] arr = { -1, -1 };
         if (nums.length == 0 || target < nums[s] || target > nums[e]) {
-            return arr;
+            return new int[]{-1,-1};
         }
         int i;
         int j;
@@ -35,11 +34,11 @@ class Solution {
             }
         }
         i = s;
-        if (pos != -1) {
-            arr[0] = i;
-            arr[1] = j;
+        if (pos == -1) {
+            i=-1;
+            j=-1;
         }
-        return arr;
+        return new int[]{i,j};
 
     }
 }
