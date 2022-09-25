@@ -13,13 +13,11 @@ class Solution {
             int mid=(s+e)/2;
             if(arr.get(mid)<target){
                 if(asc) s=mid+1;
-                else {e=mid-1;
-                     System.out.println("left");
-                     }
+                else e=mid-1;
             }
             else if(arr.get(mid)>target){
                 if(asc) e=mid-1;
-                else {s=mid+1;System.out.println("right");}
+                else s=mid+1;
             }
             else return mid;
         }
@@ -49,7 +47,6 @@ class Solution {
         }
         int left = findTarget(target,mountainArr,0,peak,true);
         int right = findTarget(target,mountainArr,peak+1,mountainArr.length()-1,false);
-        System.out.println("peak--->"+peak+"\nleft--->"+left+"\nright--->"+right);
         if(left==-1||right==-1){
             return (left<right)?right:left;
         }
