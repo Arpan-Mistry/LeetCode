@@ -25,7 +25,9 @@ class Solution {
             else if((nums[mid]<nums[mid-1]) && (nums[mid]<nums[mid+1])) break;
             else e=mid-1;
         }
+        // Starting Point of Rotation 
         s = mid;
+        
         int right = BinarySearch(nums,s,nums.length-1,target);
         int left = BinarySearch(nums,0,s-1,target);
         return left<=right ? right:left;
