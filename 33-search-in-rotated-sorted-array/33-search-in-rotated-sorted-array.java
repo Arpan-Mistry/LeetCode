@@ -17,7 +17,6 @@ class Solution {
         }
         int s = 0;
         int rmax= nums[e];
-        int rot = -1;
         int mid = -1;
         while(s<=e){
             mid=(s+e)/2;
