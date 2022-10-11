@@ -15,7 +15,6 @@ class Solution {
         for(i=0;i<nums.length;i++){
             if(nums[i]!=i+1) return i+1;
         }
-        // return (nums[nums.length-1]+1) >0 ?  nums[nums.length-1]+1 : 1;
         return nums[nums.length-1]+1;
     }
 }
